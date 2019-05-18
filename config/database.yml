@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username:
+  password:
+  prepared_statements: false
+
+development:
+  <<: *default
+  database: jijivishaw_web_development
+
+test:
+  <<: *default
+  database: jijivishaw_web_test
+
+staging:
+  <<: *default
+  database: jijivishaw_web_staging
+
+production:
+  <<: *default
+  database: jijivishaw_web_production
+
